@@ -1,0 +1,80 @@
+@import './src/style/variables';
+.sortContainer {
+    padding-bottom: 20px;
+    position: relative;
+    top: 10px;
+    > * {
+      display: inline-block;
+    }
+    > span {
+      margin-left: 10px;
+      transition: transform .3s;
+      color: $grey;
+    }
+    .dropdown {
+      left: 0;
+      top: 98%;
+      display: none;
+      &>ul{
+        line-height: 25px !important;
+      }
+    }
+
+    &.show {
+        > span.myarrow {
+            transform: rotate(180deg)
+        }
+        .dropdown {
+        display: block;
+        }
+    }
+  }
+  .ActivityHeader{
+    //   display: inline-flex;    
+    >div {
+        background: transparent !important;
+    }
+    h3:first-child{
+        margin: 0px;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+    .selectedSort {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: $grey;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+  }
+
+  .banner {
+    color:$darkGreen;
+    margin-top:24px;
+    margin-bottom: 20px;
+    .bannerContainer{
+      position: relative;
+      background: $green;
+      padding: 27px;
+      border-radius: 5px;
+      
+      >img{
+        position: absolute;
+        bottom: 0px;
+        right: 46px;
+        width: 115px;
+      }
+    }
+    .category {
+      font-size: 14px;
+    }
+    .categoryTitle {
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .categoryDescription{
+      font-weight: 600;
+    }
+  }
+
+  

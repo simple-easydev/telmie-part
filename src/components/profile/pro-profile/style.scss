@@ -1,0 +1,187 @@
+@import './src/style/variables';
+.proProfile {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	border-bottom: solid 1px $lightGrey;
+	margin: 5px 0;
+    padding: 20px;
+    font-size: 14px;
+    background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 11px rgba(0, 0, 0, 0.1);
+	
+    &:last-child {
+        border-bottom: none;
+    }
+	> div {
+		display: inline-block;
+		flex-grow: 1;
+		width: 12%;
+	}
+	.bioDes {
+		width: 40%;
+		overflow: hidden;
+		display: block; /* or inline-block */
+		text-overflow: ellipsis;
+		word-wrap: break-word;
+		overflow: hidden;
+		max-height: 3.6em;
+		line-height: 1.8em;
+	}
+	.rate{
+		width: 20%;
+		text-align: center;
+		color: #000;
+		font-weight: bold;
+		margin: 0px;
+	}
+	.contact {
+		display: flex;
+    	align-items: center;
+		width: 30%;
+		cursor: pointer;
+		h3 {
+			display: inline-block;
+			font-size: 18px;
+			text-transform: capitalize;
+			margin: 0;
+		}
+		> div {
+			margin-top: 3px;
+			font-size: 14px;
+			font-weight: 500;
+			overflow: hidden;
+            &.info {
+                margin-left: 15px;
+            }
+			.profession {
+		    background-color: $backgroundGrey;
+		    color: white;
+		    padding: 4px 9px;
+		    font-size: 12px;
+		    border-radius: 10px;
+		    margin-left: 8px;
+			}
+		}
+	}
+}
+
+.avatar {
+	width: 64px;
+	position: relative;
+	.avatarContainer{	
+		display: inline-block;
+			&:after {
+				content: "";
+				background-image: url('/assets/avatar/avatar_mask.png');
+				width: 64px;
+				height: 64px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 100;
+				background-size: 100%;
+			}
+			img {
+				width: 64px;
+			height: 64px;
+			object-fit: cover;
+			}
+	}
+	.statusBadge{
+		background: rgb(106, 184, 106);
+		border: solid 1px white;
+		width: 30px;
+		position: absolute;
+		right:0px;
+		bottom:0px;
+		z-index: 101;
+		border-radius: 10px;
+		text-align: center;
+		color: #fff;
+		font-size: 10px;
+	}
+}
+.info {
+	display: inline-block;
+	float: right;
+	color: rgb(76, 76, 76);
+	.startReview{
+		i {
+			width:16px;
+		}
+	}
+	h3{
+		color: #000;
+		font-weight: bold;
+	}
+	.category {
+		font-size: 14px;
+		text-transform: capitalize;
+	}
+}
+
+.relatedActivities {
+	width: 100% !important;
+	position: relative;
+	top: -10px;
+	&.expanded {
+
+		.container {
+			max-height: 1000px;
+            margin-bottom: 20px;
+		}
+		.relatedTitle {
+			span {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	.relatedTitle {
+    width: 60%;
+    text-align: left;
+    display: block;
+    position: absolute;
+    color: $lightRed2;
+    right: 0;
+    bottom: -10px;
+    text-decoration: underline;
+    cursor: pointer;
+	}
+	.container {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height .3s;
+	}
+	.related {
+		margin-bottom: 10px;
+		> div {
+			display: inline-block;
+			width: 12%;
+			text-align: left;
+			&.relatedDate {
+				width: 20%;
+                margin-left: 40%;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 880px) {
+	.activity {
+
+		> div {
+		}
+
+		.contact {
+            div.info {
+                margin-left: 0;
+            }
+		}
+		.date {
+
+		}
+	}
+}

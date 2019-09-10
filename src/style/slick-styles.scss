@@ -1,0 +1,89 @@
+@import './variables';
+
+:global {
+	.slick-list {
+    padding: 0 !important;
+
+		@media (max-width: 880px) {
+			overflow: initial;
+		}
+  }
+
+	.slick-track {
+		display: flex;
+	}
+
+  .slick-arrow {
+    top: auto;
+    bottom: 117%;
+    right: 0;
+    border-radius: 50%;
+    border: 1px solid $cloudyBlue;
+    color: $pinkishRed;
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    text-align: center;
+    background: none;
+    outline: none;
+    transition: border .3s ease;
+    margin-left: 16px;
+
+		@media (max-width: 1200px) {
+			right: 15px!important;
+		}
+		@media (max-width: 880px) {
+			right: 0!important;
+			left: 50%;
+			top: 100%;
+			bottom: auto;
+			margin-top: 60px;
+		}
+
+    &:before {
+      content: ''
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $pinkishRed;
+      border-color: $pinkishRed;
+    }
+
+    span {
+      height: 100%;
+      line-height: 46px;
+    }
+
+    &.slick-disabled {
+      color: $cloudyBlue;
+      cursor: default;
+    }
+  }
+
+  .slick-next{
+    right: calc(50% - 530px) !important;
+    @media (max-width: 1200px) {
+        right: 19px !important;
+    }
+    
+    }
+    
+  .slick-prev {
+    left: auto;
+    right: calc(50% - 530px + 64px) !important;
+		@media (max-width: 1200px) {
+			right: 79px!important;
+		}
+		@media (max-width: 880px) {
+			right: 0!important;
+			left: 50%;
+			margin-left: -56px;
+		}
+  }
+}
+
+
+// WEBPACK FOOTER //
+// ./style/slick-styles.scss

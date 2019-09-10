@@ -1,0 +1,119 @@
+
+@import './src/style/variables';
+:global {
+	#search {
+		> h2 {
+			margin: 40px 0 30px 0;
+			font-size: 40px;
+			text-align: left;
+            margin-left: 20%;
+            padding-left: 50px;
+			span {
+				color: $red;
+				font-weight: 500;
+				&.count {
+					color: $grey;
+					font-size: 16px;
+					display: block;
+					opacity: 0.5;
+					font-weight: 300;
+				}
+			}
+		}
+	}
+	.empty {
+	  width: 79%;
+	  float: right;
+	  text-align: center;
+	  background-color: #f1f1f187;
+	  padding: 20px 0;
+	  border-radius: 10px;
+	  margin: 10px 0 40px;
+		span {
+			font-weight: bold;
+			color: $red;
+		}
+	}
+	#searchContainer {
+
+	}
+	@media (max-width: 880px) {
+		#search {
+			> h2 {
+				font-size: 30px !important;
+                margin-left:0;
+                padding-left: 0;
+                text-align: center;
+			}
+            #sideBar {  
+            }
+		}
+	}
+}
+
+.filterArea{
+	text-align: left;
+	margin-left: 20%;
+}
+
+.searchContainer{
+	position: relative;
+	display: inline-block;
+	width: 60%;	
+	max-width: 350px;
+
+	.serchInput{
+		color: $red;
+		font-weight: 500;
+		font-size: 40px;
+		text-align: left;
+		font-family: 'Roboto', arial, sans-serif;
+		border: none;
+		border-bottom: 1px solid black;
+		outline: none;
+		width: calc(100% - 35px);
+		
+		&:focus{
+			border-bottom: 1px solid $red;
+		}
+		&:disabled{
+			background-color: unset;
+			cursor: default;
+		}
+	}
+	
+	.searchIcon{
+		position: absolute;
+		font-size: 38px;
+		top: 6px;
+    	right: 0;
+		& > span{
+			cursor: pointer;
+		}
+	}
+}
+
+
+@media (max-width: 880px) {
+	.filterArea {
+		margin-left:0;
+		text-align: center;
+	}
+	.searchContainer{
+		text-align: left !important;
+		max-width: 315px;
+		width: 85%;
+		.serchInput{
+			font-size: 30px;
+			width: calc(100% - 25px);
+		}
+		.searchIcon{
+			font-size: 28px;
+			top: 6px;
+		}
+	}
+}
+
+
+// WEBPACK FOOTER //
+// ./routes/search/style.scss

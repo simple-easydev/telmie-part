@@ -1,0 +1,29 @@
+@import './src/style/variables';
+.pagination {
+	text-align: center;
+	margin-top: 20px;
+	> span {
+		background-color: $lightBackgroundGrey;
+    border-radius: 50px;
+    color: #2e2e2e;
+    padding: 4px 10px;
+		transition: all .2s;
+		margin: 0px 4px;
+		cursor: pointer;
+		&.disabled {
+			opacity: 0.4;
+			pointer-events: none;
+		}
+		&.selected, &:hover {
+			color:white;
+			text-decoration: none;
+			background-color: $red;
+		}
+	}
+	.next {
+		float: right;
+	}
+	.prev {
+		float: left;
+	}
+}

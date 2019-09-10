@@ -1,0 +1,102 @@
+@import './src/style/variables';
+
+$font-size: 18px;
+
+.formRadio {
+    .label {
+        display: block;
+        padding: 3px 0;
+        margin-right: 20px;
+        font-size: $font-size;
+        white-space: nowrap;
+    }
+    
+    .radioGroup {
+        display: block;
+        width: 100%;
+        background: transparent;
+        color: $blue;
+
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+            font-size: 18px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            &.disabledContainer{
+                cursor: default;
+            }
+
+            &:not(:last-child){
+                margin-right: 20px;
+                margin-bottom: 5px;
+            }
+
+            input {
+                position: absolute;
+                opacity: 0;
+            }
+
+            &:hover input:enabled ~ .checkmark {
+                background-color: rgb(218, 214, 214);
+            }
+
+            input:disabled ~ .checkmark {
+                background-color: rgba(218, 214, 214, 0.4);
+            }
+
+            input:checked ~ .checkmark {
+                background-color: white;
+            }
+
+            input:checked ~ .checkmark:after {
+                display: block;
+            }
+
+            .checkmark:after {
+                top: 3px;
+                left: 3px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: $red;
+            }
+        }
+        
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            border-radius: 50%;
+            border: 1px solid $blue;
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 880px) {
+	.radioGroup {
+        text-align: center;
+        .container {
+            display: inline-block !important;
+        }
+    }
+}
+
+
+// WEBPACK FOOTER //
+// ./components/radio/style.scss

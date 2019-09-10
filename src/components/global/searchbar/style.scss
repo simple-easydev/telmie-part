@@ -1,0 +1,41 @@
+.searchBar {
+    width:100%;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    border-radius: 3px;
+    border: solid 1px #ddd;
+    padding: 14px;
+    
+    .searchBarImg{
+        &>span{
+            margin-right: 14px;
+        }
+    }
+    .searchBarInputContainer {
+        width: 100%;
+        input {
+            height:100%;
+            width: inherit;
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            color: #1a181b;
+        }
+        ::placeholder{
+            color: #ccc;
+        }
+    }   
+}
+
+.noneBorderInput {
+    border-color: transparent;
+    outline: none;
+}
+
+#leftSideMenuBar{
+    width: 200px;
+}

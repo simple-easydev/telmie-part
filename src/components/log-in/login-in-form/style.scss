@@ -1,0 +1,27 @@
+@import './src/style/variables';
+.logInForm {
+	width: 450px;
+	margin: 0 auto;
+	button {
+    height: 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+	}
+}
+.failure {
+	color: $red;
+  background: $lightRed;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.forgotPassword {
+	float: right;
+}
+@media (max-width: 880px) {
+	.logInForm {
+		width: 100%;
+	}
+}

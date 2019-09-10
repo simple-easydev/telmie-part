@@ -1,0 +1,71 @@
+@import './src/style/variables';
+.sideBar {
+    float: left;
+    position: absolute;
+    width: 285px;
+    padding: 20px;
+    background: white;
+    -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.1);
+    
+    &>div:first-child{
+        font-weight: 600;
+        padding: 10px;
+    }
+
+    @media (max-width: 880px) {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 880px) {
+	.sideBar {
+		text-align: left;
+		margin-bottom: 20px;
+		width: 100%;
+        float: none;
+        position: relative;
+        .switchContainer {
+            margin-bottom: 0;
+        }
+        > h3 {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            display: block;
+            top:-6px;
+        }
+        > div {
+            width: 100%;
+        }  
+    }
+    
+}
+
+
+
+.showAllLanOption{
+    padding: 0 10px 10px 10px;
+    font-size: 14px;
+    a {
+        color: $red !important;
+        text-decoration: none !important;
+        span {
+            font-size: 12px;
+        }
+    }
+}
+
+.otherSideBarOption {
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    a {
+        color: $black !important;
+        text-decoration: none !important;
+    }
+}
+// WEBPACK FOOTER //
+// ./components/search/sidebar/style.scss

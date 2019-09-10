@@ -1,0 +1,75 @@
+@import './src/style/variables';
+
+$font-size: 18px;
+
+.formRadio {
+    display: inline-flex;
+    .label {
+        display: table-row;
+        padding: 3px 0;
+        margin-right: 20px;
+        font-size: $font-size;
+        white-space: nowrap;
+    }
+    
+    .radioGroup {
+        display: block;
+        width: 100%;
+        background: transparent;
+        color: $blue;
+
+        .container {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            font-size: 14px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding: 2px 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            &.disabledContainer{
+                cursor: default;
+            }
+
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+
+            input {
+                position: absolute;
+                opacity: 0;
+            }
+
+            &.checked {
+                background: $red;
+                color:#fff;
+                border-radius: 20px;
+            }
+
+
+        }
+    }
+}
+
+.OTHER, .COACHING, .LEGAL{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+@media (max-width: 880px) {
+	.radioGroup {
+        text-align: center;
+        .container {
+            display: inline-block !important;
+        }
+    }
+}
+
+
+// WEBPACK FOOTER //
+// ./components/radio/style.scss

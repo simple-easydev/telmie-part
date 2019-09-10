@@ -1,0 +1,31 @@
+@import './src/style/variables';
+
+.errorWrapper{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 20px;
+    padding: 0 30px;
+
+    .error404{
+        color: $red;
+        font-size: 50px;
+    }
+
+    .notFound {
+        color: $grey;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .errorInfo{
+        margin-bottom: 15px;
+    }
+
+    button{
+        font-size: 20px;
+        padding: 5px 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,147 @@
+@import './src/style/variables';
+.activity {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 16px 0;
+	font-size: 14px;
+    border-bottom: solid 1px $lightGrey;
+    &:last-child {
+        border-bottom: none;
+    }
+	> div {
+		display: inline-block;
+		flex-grow: 1;
+		width: 12%;
+	}
+	.type {
+		width: 25%;
+	}
+	.count{
+		width: 15%;
+		text-align: center;
+	}
+	.contact {
+		display: flex;
+    	align-items: center;
+		width: 40%;
+		cursor: pointer;
+		h3 {
+			display: inline-block;
+			font-size: 18px;
+			text-transform: capitalize;
+			margin: 0;
+		}
+		> div {
+			margin-top: 3px;
+			font-size: 14px;
+			font-weight: 500;
+			overflow: hidden;
+            &.info {
+                margin-left: 15px;
+            }
+			.profession {
+		    background-color: $backgroundGrey;
+		    color: white;
+		    padding: 4px 9px;
+		    font-size: 12px;
+		    border-radius: 10px;
+		    margin-left: 8px;
+			}
+		}
+	}
+	.date {
+		width: 20%;
+	}
+}
+
+.avatar {
+  width: 64px;
+  position: relative;
+  display: inline-block;
+	&:after {
+		content: "";
+		background-image: url('/assets/avatar/avatar_mask.png');
+		width: 64px;
+		height: 64px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		background-size: 100%;
+	}
+	img {
+		width: 64px;
+    height: 64px;
+    object-fit: cover;
+	}
+}
+.info {
+	display: inline-block;
+	width: 80%;
+	float: right;
+}
+
+.relatedActivities {
+	width: 100% !important;
+	position: relative;
+	top: -10px;
+	&.expanded {
+
+		.container {
+			max-height: 1000px;
+            margin-bottom: 20px;
+		}
+		.relatedTitle {
+			span {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	.relatedTitle {
+    width: 60%;
+    text-align: left;
+    display: block;
+    position: absolute;
+    color: $lightRed2;
+    right: 0;
+    bottom: -10px;
+    text-decoration: underline;
+    cursor: pointer;
+	}
+	.container {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height .3s;
+	}
+	.related {
+		margin-bottom: 10px;
+		> div {
+			display: inline-block;
+			width: 12%;
+			text-align: left;
+			&.relatedDate {
+				width: 20%;
+                margin-left: 40%;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 880px) {
+	.activity {
+
+		> div {
+		}
+
+		.contact {
+            div.info {
+                margin-left: 0;
+            }
+		}
+		.date {
+
+		}
+	}
+}

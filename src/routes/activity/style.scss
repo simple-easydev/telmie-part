@@ -1,0 +1,18 @@
+
+@import './src/style/variables';
+:global {
+	#profile {
+		min-height: 0;
+		padding: 0px !important;
+	}
+	.empty {
+		text-align: center;
+	  font-size: 20px;
+	  padding: 30px 0 10px;
+	}
+}
+
+
+
+// WEBPACK FOOTER //
+// ./routes/activity/style.scss

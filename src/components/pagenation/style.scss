@@ -1,0 +1,13 @@
+@import '../../style/variables';
+.PageNation{
+    display: inline-flex;
+    align-items: center;
+    a {
+        background: #fff;
+        padding: 2px 10px;
+        border-radius: 2px;
+        border: solid 1px $lightGrey; 
+        margin-left: 10px;
+        border-radius: 5px;
+    }
+}
